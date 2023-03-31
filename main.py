@@ -12,7 +12,7 @@ def index():
 @app.route('/upload',method=["POST"])
 def upload():
     data = request.files
-    return data["file"]
+    return jsonify({"file":data["file"]})
 
 
 if __name__ == '__main__':
