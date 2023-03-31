@@ -9,7 +9,7 @@ CORS(app)
 def index():
     return "Jz Here"
 
-@app.route('/upload',method=["POST"])
+@app.route('/upload',methods=["POST"])
 def upload():
     data = request.files
     return jsonify({"file":data["file"]})
